@@ -14,7 +14,7 @@ window.addEventListener('message', function(event){
 
         // テキストを更新(luaからのtextデータ)
         if(item.text){
-            this.document.getElementById('message-area').innerText = item.text;
+            this.document.getElementById('message-area').innerHTML = item.text;
         }
     }
     else if (item.action === 'close'){
