@@ -14,3 +14,17 @@ RegisterCommand('nui', function()
     
     print("DEBUG: NUI OPENED")
 end,false)
+
+
+-- JSからのコールバック受信
+-- JS側の fetch(`https://${resourceName}/closeUI`)に対応
+RegisterNUICallback('closeUI', function(data, cb)
+    -- NUIフォーカスを無効
+    SetNuiFocus(false, false)
+
+    print("DEBUG: NUI Closed by User")
+
+    -- JS側に処理完了を伝える(必須)
+    -- これを返さないとJS側でエラーやタイムアウトになることがある
+    cb('ok')
+end)
