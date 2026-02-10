@@ -26,5 +26,5 @@ RegisterNUICallback('closeUI', function(data, cb)
 
     -- JS側に処理完了を伝える(必須)
     -- これを返さないとJS側でエラーやタイムアウトになることがある
-    cb('ok')
+    cb({ status = 'ok' })
 end)
