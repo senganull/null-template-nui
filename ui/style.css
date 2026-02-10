@@ -1,0 +1,57 @@
+/* body全体の設定 
+    NUIではbodyが画面全体を覆うため、背景色は透明(transparent)にする必要があります。
+*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent; /* 重要: ゲーム画面を透けさせる */
+    display: flex;           /* Flexboxで中身を中央寄せ */
+    justify-content: center; /* 水平方向の中央 */
+    align-items: center;     /* 垂直方向の中央 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;        /* スクロールバーを出さない */
+}
+
+/* メインコンテナのデザイン */
+#container {
+    background-color: rgba(30, 30, 30, 0.9); /* 少し透けた黒背景 */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    width: 400px;
+    text-align: center;
+    /* displayプロパティはHTMLのインラインスタイルまたはJSで制御します */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #00a8ff; /* アクセントカラー */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#message-area {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* 閉じるボタンのデザイン */
+#close-btn {
+    background-color: #e84118;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#close-btn:hover {
+    background-color: #c23616;
+}
